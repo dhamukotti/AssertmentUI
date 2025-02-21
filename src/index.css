@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.app {
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* App.css or your global stylesheet */
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.content-scrollable {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Add padding for better spacing */
+  margin-top: 64px; /* Adjust based on Topbar height */
+  margin-left: 240px; /* Adjust based on Sidebar width */
+}
+
+/* Adjust the Topbar and Sidebar styles */
+.Topbar {
+  position: fixed;
+  top: 0;
+  left: 240px; /* Adjust based on Sidebar width */
+  right: 0;
+  z-index: 1000;
+  height: 64px; /* Adjust based on your Topbar height */
+}
+
+.Sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px; /* Adjust based on your Sidebar width */
+  height: 100vh;
+  z-index: 1000;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
